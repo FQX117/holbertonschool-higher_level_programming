@@ -5,3 +5,4 @@ while n < 100:
         print("{:02}, ".format(n), end="")
     else:
         print("{:02}".format(n))
+n = n+1
