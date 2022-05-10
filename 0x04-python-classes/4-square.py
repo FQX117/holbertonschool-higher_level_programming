@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 '''a class for square'''
+
+
 class Square:
     '''this is class'''
     def __init__(self, size=0):
         self.size = size
-
     def area(self):
         return(self.__size * self.__size)
-
     def my_print(self):
         if self.__size == 0:
             print()
@@ -16,11 +16,9 @@ class Square:
                 for j in range(self.__size):
                     print("#", end='')
                 print()
-
     @property
     def size(self):
         return (self.__size)
-
     @size.setter
     def size(self, value):
         if type(value) != int:
