@@ -1,0 +1,57 @@
+The ``add_integer`` module
+=======================
+
+Using ``add_integer``
+---------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# check total
+    >>> add_integer(1, 7)
+    8
+
+# check total
+    >>> add_integer(2, 10)
+    12
+
+
+# check total +
+    >>> add_integer(5, 7)
+    12
+
+
+# check total -
+    >>> add_integer(3, -7)
+    -4
+
+# check total
+    >>> add_integer(-3, 1)
+    -2
+
+
+# check total
+    >>> add_integer(-8, 7)
+    -1
+
+
+# check total
+    >>> add_integer(3, -5)
+    2
+
+
+# check error 
+    >>> add_integer("wow", 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+
+# check error 
+    >>> add_integer("just", 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+
+# check error 
+    >>> add_integer("why", 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
