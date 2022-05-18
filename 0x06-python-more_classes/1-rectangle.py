@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''defines a rectangle'''
+'''this is a notation'''
 
 
 class Rectangle:
-    '''defines a rectangle'''
+    '''this is a notation'''
     def __init__(self, width=0, height=0):
         self.__height = height
         self.__width = width
