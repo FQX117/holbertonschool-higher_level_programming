@@ -7,15 +7,12 @@ from models.base import Base
 
 class Rectangle(Base):
     """This is a square"""
-
-   
-
     def __init__(self, width, height, x=0, y=0, id=None):
-       self.width = width
-       self.height = height
-       self.x = x
-       self.y = y
-       super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -68,9 +65,11 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+    
     def area(self):
         """gives area"""
         return self.width * self.height
+    
     def display(self):
         """prints a rectangle with #"""
         if self.width == 0 or self.height == 0:
@@ -82,15 +81,16 @@ class Rectangle(Base):
             [print(" ", end="") for x in range(self.x)]
             [print("#", end="") for w in range(self.width)]
             print("")
+    
     def update(self, *args, **kwargs):
         """overwrites values of rectangle"""
         """update the Rectangle.
         args New attribute values.
-            1 = id 
+            1 = id
             2 = width
             3 = height
-            4 = x 
-            5 = y 
+            4 = x
+            5 = y
         """
         if args and len(args) != 0:
             a = 0
@@ -125,6 +125,7 @@ class Rectangle(Base):
                     self.x = k
                 elif kw == "y":
                     self.y = k
+    
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle."""
         return {
