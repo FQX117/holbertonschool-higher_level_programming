@@ -1,2 +1,2 @@
 -- hmmmmmmm
-show tables;
+SHOW TABLES;
