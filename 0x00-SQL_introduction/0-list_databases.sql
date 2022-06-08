@@ -1,2 +1,2 @@
 -- this is difrent 
-show databases;
+SHOW DATABASES;
