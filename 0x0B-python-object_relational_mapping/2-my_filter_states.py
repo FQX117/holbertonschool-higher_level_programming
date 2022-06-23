@@ -22,5 +22,5 @@ def print_statevalue():
     data.close()
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     print_statevalue()
