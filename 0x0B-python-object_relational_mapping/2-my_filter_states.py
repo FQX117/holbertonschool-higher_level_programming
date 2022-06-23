@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """a script that takes in an argument and displays 
-all values in the states table of hbtn_0e_0_usa"""
+all values in the states table of hbtn_0e_0_usa
+"""
 
 import MySQLdb
 
 
 def print_statevalue():
-    from sys import argh
+    from sys import argv
     data = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                             pw=argv[2], database=argv[3])
 
