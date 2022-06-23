@@ -12,8 +12,8 @@ def print_statevalue():
 
     cursor = data.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name\LIKE binary %s",
-        [format(argv[4])])
+    cursor.execute("SELECT * FROM states WHERE name\
+        LIKE binary %s",[format(argv[4])])
     for rows in cursor.fetchall():
         print(rows)
 
