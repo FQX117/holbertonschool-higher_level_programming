@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """a script that takes in the name of a state as an
- argument and lists all cities of that state"""
+argument and lists all cities of that state"""
 
 import MySQLdb
 
@@ -19,7 +19,7 @@ def listcitys():
     cur.close()
     db.close()
 
-    
+
 if __name__ == "__main__":
-     main()
+    main()
     
