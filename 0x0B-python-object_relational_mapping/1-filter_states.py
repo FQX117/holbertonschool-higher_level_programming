@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-""" a script that lists all states with a name starting with N"""
+"""
+lists all states with a name starting with N (upper N) from the
+database hbtn_0e_0_usa
+"""
 
 import MySQLdb
 
 
-def print_nstate():
+def print_n_state():
     from sys import argv
-    data = MySQLdb.connect(host="localhost", port=3306, user=argv[1], pw=argv[2], database=argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], database=argv[3])
 
-    cursor = data.cursor()
+    cursor = db.cursor()
 
     cursor.execute("SELECT * FROM states")
     for rows in cursor.fetchall():
@@ -16,8 +20,8 @@ def print_nstate():
             print(rows)
 
     cursor.close()
-    data.close()
+    db.close()
 
 
-if __name__=="__name__":
-    print_nstate()
+if __name__ == "__main__":
+    print_n_state()
