@@ -6,21 +6,21 @@ all values in the states table of hbtn_0e_0_usa
 import MySQLdb
 
 
-def print_statevalue():
+def print_n_state():
     from sys import argv
     data = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                             pw=argv[2], database=argv[3])
 
-    cur = data.cursor()
+    cursor = data.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name\
+    cursor.execute("SELECT * FROM states WHERE name\
         LIKE binary %s",[format(argv[4])])
-    for rows in cur.fetchall():
+    for rows in cursor.fetchall():
         print(rows)
 
-    cur.close()
+    cursor.close()
     data.close()
 
 
 if __name__=="__name__":
-    print_statevalue()
+    print_n_state()
