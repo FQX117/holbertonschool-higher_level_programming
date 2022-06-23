@@ -11,14 +11,14 @@ def print_statevalue():
     data = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                             pw=argv[2], database=argv[3])
 
-    cursor = data.cursor()
+    cur = data.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name\
+    cur.execute("SELECT * FROM states WHERE name\
         LIKE binary %s",[format(argv[4])])
-    for rows in cursor.fetchall():
+    for rows in cur.fetchall():
         print(rows)
 
-    cursor.close()
+    cur.close()
     data.close()
 
 
