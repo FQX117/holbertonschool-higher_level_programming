@@ -22,4 +22,3 @@ def listcitys():
 
 if __name__ == "__main__":
     listcitys()
-    
