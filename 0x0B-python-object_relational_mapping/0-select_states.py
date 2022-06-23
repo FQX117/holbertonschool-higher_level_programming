@@ -7,7 +7,7 @@ def list_state():
     """func to list states"""
     from sys import argv
     data = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-    pw=argv[2], db=argv[3])
+    passwd=argv[2], db=argv[3])
 
     cursor = data.cursor()
 
