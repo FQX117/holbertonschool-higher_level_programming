@@ -21,4 +21,3 @@ def print_statevalue():
 
 if __name__ == "__main__":
     print_statevalue()
-   
