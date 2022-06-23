@@ -1,0 +1,1 @@
+SO py is not my favoirit or freind
